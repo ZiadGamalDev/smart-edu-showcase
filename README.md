@@ -71,11 +71,14 @@ Smart-Edu automates the digitization of multiple-choice question exams from PDF 
 - [PDF Upload](screenshots/06-admin-pdf-upload.png) - Simple drag & drop interface
 - [Student Exam](screenshots/12-student-exam-interface.png) - Clean exam-taking experience
 - [AI Feedback](screenshots/13-student-ai-feedback.png) - Intelligent explanations
+- [AI Context](screenshots/16-student-ai-help-context.png) - Context-aware help
+- [Review AI](screenshots/17-student-review-ai.png) - Detailed performance review
+- [Flagged AI](screenshots/18-student-flagged-ai-help.png) - Practice on weak points
 
 **Complete Documentation:**
-- 📄 [Admin Features PDF](pdfs/admin-features.pdf) - Complete admin interface showcase (20 screenshots)
-- 📄 [Student Features PDF](pdfs/student-features.pdf) - Complete student interface showcase (21 screenshots)
-- 📄 [Complete Showcase PDF](pdfs/complete-showcase.pdf) - Full platform showcase with all screenshots (44 screenshots)
+- 📄 [Admin Features PDF](pdfs/admin-features.pdf) - Complete admin interface showcase (7 screenshots)
+- 📄 [Student Features PDF](pdfs/student-features.pdf) - Complete student interface showcase (12 screenshots)
+- 📄 [Complete Showcase PDF](pdfs/complete-showcase.pdf) - Full platform showcase with all screenshots (20 screenshots)
 
 ---
 
