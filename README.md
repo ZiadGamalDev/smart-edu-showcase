@@ -24,7 +24,7 @@ Smart-Edu automates the digitization of multiple-choice question exams from PDF 
 - **Smart Pattern Recognition** - Handles complex question formats
 - **Quality Validation** - Flags incomplete questions for review
 
-![PDF Upload Interface](screenshots/02-pdf-upload.png)
+![PDF Upload Interface](screenshots/06-admin-pdf-upload.png)
 
 ### 👨‍💼 Admin Features
 - **Drag & Drop Upload** - Simple PDF upload with progress tracking
@@ -32,7 +32,7 @@ Smart-Edu automates the digitization of multiple-choice question exams from PDF 
 - **Question Review** - Review flagged questions with quality indicators
 - **Import History** - Track all imports with detailed statistics
 
-![Admin Dashboard](screenshots/01-admin-dashboard.png)
+![Admin Dashboard](screenshots/03-admin-dashboard-analytics.png)
 
 ### 🎓 Student Features
 - **Practice Exams** - Take unlimited practice tests
@@ -40,9 +40,9 @@ Smart-Edu automates the digitization of multiple-choice question exams from PDF 
 - **AI-Powered Help** - Intelligent feedback on incorrect answers
 - **Progress Tracking** - Monitor performance over time
 
-![Student Exam Interface](screenshots/08-student-exam.png)
+![Student Exam Interface](screenshots/12-student-exam-interface.png)
 
-![AI Feedback](screenshots/10-ai-feedback.png)
+![AI Feedback](screenshots/13-student-ai-feedback.png)
 
 ---
 
@@ -67,10 +67,10 @@ Smart-Edu automates the digitization of multiple-choice question exams from PDF 
 ## 📸 Visual Showcase
 
 **Quick Preview:**
-- [Admin Dashboard](screenshots/01-admin-dashboard.png) - Overview and management
-- [PDF Upload](screenshots/02-pdf-upload.png) - Simple drag & drop interface
-- [Student Exam](screenshots/08-student-exam.png) - Clean exam-taking experience
-- [AI Feedback](screenshots/10-ai-feedback.png) - Intelligent explanations
+- [Admin Dashboard](screenshots/03-admin-dashboard-analytics.png) - Overview and management
+- [PDF Upload](screenshots/06-admin-pdf-upload.png) - Simple drag & drop interface
+- [Student Exam](screenshots/12-student-exam-interface.png) - Clean exam-taking experience
+- [AI Feedback](screenshots/13-student-ai-feedback.png) - Intelligent explanations
 
 **Complete Documentation:**
 - 📄 [Admin Features PDF](pdfs/admin-features.pdf) - Complete admin interface showcase (20 screenshots)
