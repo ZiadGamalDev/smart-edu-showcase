@@ -1,5 +1,7 @@
 # Smart-Edu: Intelligent Exam Platform
 
+**Live Demo:** [https://smart-edu.ziadgamal.com](https://smart-edu.ziadgamal.com)
+
 Automated PDF question extraction with 99.61% accuracy. Transforms paper exams into digital practice tests in minutes.
 
 ![Admin Dashboard](screenshots/03-admin-dashboard-analytics.png)
@@ -62,4 +64,4 @@ MIT License. See LICENSE file for details.
 ---
 
 **Status:** Production Ready
-**Contact:** Ziad Gamal
+**Contact:** [ziadgamal.com](https://ziadgamal.com)
