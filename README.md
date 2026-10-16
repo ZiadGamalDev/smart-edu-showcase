@@ -2,7 +2,7 @@
 
 **Live Demo:** [https://smart-edu.ziadgamal.com](https://smart-edu.ziadgamal.com)
 
-Automated PDF question extraction with 99.61% accuracy. Transforms paper exams into digital practice tests in minutes.
+Aviation exam-prep platform. A deterministic PDF parser turns question-bank PDFs into practice exams: 99.61% extraction rate (2,055 of 2,063 questions on one real question bank).
 
 ![Admin Dashboard](screenshots/03-admin-dashboard-analytics.png)
 
@@ -10,14 +10,14 @@ Automated PDF question extraction with 99.61% accuracy. Transforms paper exams i
 
 ## Overview
 
-Smart-Edu addresses a critical bottleneck in the e-learning industry: manual data entry. Educational institutions spend countless hours digitizing legacy exams. This platform automates the entire process using a custom AI pipeline, reducing digitization time from days to seconds.
+Smart-Edu addresses a critical bottleneck in the e-learning industry: manual data entry. Educational institutions spend countless hours digitizing legacy exams. This platform automates the import with a deterministic Python parser (PyMuPDF plus pattern matching) behind a queued job. AI is a fallback layer, not the extraction engine.
 
-**Key Achievement:** Extracted 2,055 out of 2,063 questions (99.61% accuracy) from a single PDF in under 30 seconds.
+**Key result:** 2,055 of 2,063 questions extracted (99.61% extraction rate) from one real question-bank PDF. This figure comes from the deterministic parser; AI only fills a missing answer key and rescues questions the parser could not read.
 
 ## Key Features
 
 ### Intelligent PDF Extraction
-*   **High Accuracy:** Proven 99.61% extraction rate on complex layouts.
+*   **Extraction rate:** 99.61% (2,055 of 2,063) on a multi-column question bank, from the deterministic pipeline.
 *   **Structure Recognition:** Automatically identifies questions, choices (A-D), and correct answers.
 *   **Media Handling:** Preserves mathematical formulas and diagrams.
 *   **Quality Control:** Automated flags for low-confidence extractions requiring human review.
@@ -25,7 +25,7 @@ Smart-Edu addresses a critical bottleneck in the e-learning industry: manual dat
 ![PDF Upload Interface](screenshots/06-admin-pdf-upload.png)
 
 ### Student Experience
-*   **Real-time Exam Player:** A seamless, distraction-free environment for taking practice tests.
+*   **Real-time Exam Player:** A distraction-free environment for taking practice tests.
 *   **Instant Feedback:** Immediate grading with detailed performance breakdowns.
 *   **AI Tutoring:** Integrated AI provides context-aware explanations for incorrect answers, acting as a personal tutor.
 *   **Multi-Theme Support:** Optimized for readability in both Light and Dark modes.
@@ -35,20 +35,13 @@ Smart-Edu addresses a critical bottleneck in the e-learning industry: manual dat
 ![Available Exams](screenshots/11-student-available-exams.png)
 ![AI Feedback](screenshots/13-student-ai-feedback.png)
 
-## Business Impact
-
-Smart-Edu transforms the operational workflow of educational institutions:
-1.  **Operational Efficiency:** Reduces exam digitization time by **99%** (from days to minutes).
-2.  **Cost Reduction:** Eliminates the need for dedicated data-entry personnel.
-3.  **Student Retention:** Provides a superior, tech-forward learning experience with instant feedback loops, increasing student engagement and satisfaction.
-
-
 ## Technology Stack
 
-*   **Backend:** Laravel 11, PHP 8.3
-*   **Frontend:** React 18, Inertia.js, TypeScript
-*   **Infrastructure:** Nginx, Supervisor, Redis (Queue Management)
-*   **AI & Processing:** Python 3.10, OpenAI API, PyMuPDF
+*   **Backend:** Laravel 12, PHP 8.3
+*   **Frontend:** React 19, Inertia.js, TypeScript
+*   **Infrastructure:** Nginx, Supervisor (database queue workers), Laravel Reverb (WebSockets), MySQL
+*   **Processing:** Python, PyMuPDF
+*   **AI (fallback and student feedback):** OpenAI API with Gemini fallback
 
 ## Architecture & Documentation
 
@@ -63,5 +56,5 @@ MIT License. See LICENSE file for details.
 
 ---
 
-**Status:** Production Ready
+**Status:** Delivered (client project)
 **Contact:** [ziadgamal.com](https://ziadgamal.com)

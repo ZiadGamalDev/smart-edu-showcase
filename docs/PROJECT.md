@@ -22,13 +22,12 @@ This document provides complete context about the Smart-Edu project, including t
 
 ## Project Overview
 
-Smart-Edu is a production-ready educational platform that automates the digitization of multiple-choice question exams from PDF files. The system reduces manual data entry time by 99%+ while maintaining 99.61% extraction accuracy.
+Smart-Edu is an educational platform that automates the digitization of multiple-choice question exams from PDF files. On one real 2,063-question bank the deterministic parser extracted 2,055 questions (99.61% extraction rate).
 
 ### Core Value Proposition
 
-- **Automation**: Converts 2000+ question PDFs to structured database entries in minutes
+- **Automation**: Converts large question-bank PDFs to structured database entries through a queued job
 - **Accuracy**: 99.61% extraction rate with intelligent pattern recognition
-- **Scalability**: Handles exams from 10 to 10,000+ questions
 - **Quality Assurance**: Automatic validation and flagging of ambiguous content
 
 ---
@@ -39,8 +38,8 @@ Smart-Edu is a production-ready educational platform that automates the digitiza
 
 Educational institutions face significant barriers when digitizing paper-based exams:
 
-1. **Time Consumption**: Manual entry of 2000 questions = 40-80 hours of work
-2. **Human Error**: 2-5% error rate in manual data entry
+1. **Time Consumption**: Manual entry of thousands of questions is slow
+2. **Human Error**: Manual entry introduces typos and formatting mistakes
 3. **Format Variability**: PDFs come in diverse layouts and styling
 4. **Maintenance Overhead**: Updates require complete re-entry
 
@@ -51,8 +50,6 @@ A three-stage automated pipeline:
 1. **Text Extraction**: Parse PDF with styling metadata (bold, color, position)
 2. **Question Detection**: Pattern recognition for questions, choices, and correct answers
 3. **Database Import**: Structured import with duplicate detection and quality validation
-
-**Result**: <5 minutes processing + 30 minutes review = 99% time savings
 
 ---
 
@@ -67,7 +64,7 @@ A three-stage automated pipeline:
 - Queue workers for background processing
 
 **Frontend:**
-- React 18 with TypeScript
+- React 19 with TypeScript
 - Inertia.js for full-stack integration
 - Tailwind CSS with dark mode
 - Radix UI components
@@ -178,7 +175,7 @@ A three-stage automated pipeline:
 
 ## Performance Metrics
 
-### Extraction Accuracy (Validated on 2063-question exam)
+### Extraction results (one 2,063-question bank)
 
 - **Coverage**: 99.61% (2055/2063 questions extracted)
 - **Correct Answer Detection**: 99.42% (2043/2055)
@@ -189,7 +186,6 @@ A three-stage automated pipeline:
 
 - **Parse Time**: 2-5 seconds per 100 pages
 - **Extraction Time**: 1-3 seconds per 1000 questions
-- **Total Pipeline**: <30 seconds for 2000+ question exam
 - **Database Import**: Optimized bulk inserts with transactions
 
 ### Reliability
@@ -202,7 +198,6 @@ A three-stage automated pipeline:
 ### System Performance
 
 - **Memory Usage**: Optimized queries prevent memory exhaustion (PHP limit: 256MB)
-- **Response Times**: <200ms for most API endpoints
 - **Concurrent Users**: Tested with multiple simultaneous imports
 - **Database Queries**: Optimized with eager loading and indexes
 
@@ -210,23 +205,7 @@ A three-stage automated pipeline:
 
 ## Business Impact
 
-### Time Savings
-
-- **Before**: 40-80 hours for 2000 questions (manual entry)
-- **After**: <5 minutes automated + 30 minutes review
-- **ROI**: 99%+ time reduction
-
-### Error Reduction
-
-- **Manual Error Rate**: 2-5% (typos, formatting mistakes)
-- **Automated Error Rate**: <0.4% (edge cases only)
-- **Quality Improvement**: 95%+ reduction in data entry errors
-
-### Scalability
-
-- **Volume**: 10 to 10,000+ questions per exam
-- **Concurrency**: Multiple admins can import simultaneously
-- **Storage**: Efficient deduplication across exams
+Import of a question bank no longer needs manual entry; the admin reviews the questions the parser flagged. Time and error-rate savings were not measured, so none are claimed.
 
 ---
 
@@ -234,7 +213,6 @@ A three-stage automated pipeline:
 
 ### Code Quality
 
-- **Testing**: Pest (PHP) and Vitest (JS) with 80%+ coverage
 - **Type Safety**: TypeScript strict mode
 - **Code Standards**: PSR-12 (PHP), ESLint (JavaScript)
 - **Documentation**: Inline comments + technical docs
@@ -301,7 +279,7 @@ pdf-parser/
 
 **Bold-Only Support**
 - Enhanced detection for bold-only PDFs
-- Currently: Bold+red only (proven 99.61% accuracy)
+- Currently: Bold+red only (99.61% extraction rate)
 - Future: Expand to bold-only with validation
 
 **Bulk Operations**
@@ -337,12 +315,10 @@ pdf-parser/
 
 - **Total Questions Processed**: 2,000+
 - **PDF Files Processed**: 10+
-- **Extraction Accuracy**: 99.61%
+- **Extraction rate**: 99.61% (2,055 of 2,063, deterministic parser)
 - **Lines of Code**: ~15,000+ (Laravel + React)
 - **Python Scripts**: 2 core modules
-- **Database Tables**: 10+ optimized schemas
-- **API Endpoints**: 30+ RESTful endpoints
-- **Test Coverage**: 80%+ across critical paths
+- **Routes**: about 150 (web and API)
 
 ---
 

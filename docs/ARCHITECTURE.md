@@ -48,7 +48,7 @@ Smart-Edu follows a modern full-stack architecture with a clear separation betwe
 
 ### Frontend Layer
 
-**Technology**: React 18 + Inertia.js + TypeScript
+**Technology**: React 19 + Inertia.js + TypeScript
 
 **Key Components:**
 - **Admin Dashboard**: Exam management, import management, question review
@@ -211,7 +211,7 @@ HTTP Request → Middleware → Controller → FormRequest (Validation) → Serv
 - **Configuration**: `php artisan config:cache`
 - **Routes**: `php artisan route:cache`
 - **Views**: `php artisan view:cache`
-- **AI Feedback**: Redis/file-based caching for expensive operations
+- **AI Feedback**: database/file-based caching for expensive operations
 
 ### Database Optimizations
 - **Indexes**: Strategic indexes on foreign keys and search columns
@@ -228,7 +228,7 @@ HTTP Request → Middleware → Controller → FormRequest (Validation) → Serv
 ## Scalability Considerations
 
 ### Horizontal Scaling
-- **Stateless Design**: Laravel sessions stored in database/Redis
+- **Stateless Design**: Laravel sessions stored in the database
 - **Load Balancer Ready**: No server-side session storage
 - **Queue Workers**: Separate processes for background jobs
 
